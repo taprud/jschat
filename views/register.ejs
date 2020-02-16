@@ -1,0 +1,45 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i>  Register
+      </h1>
+      <%- include('./partials/errors.ejs'); %>
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <label for="nick">Nickname</label>
+          <input
+            type="name"
+            id="nick"
+            name="nick"
+            class="form-control"
+            placeholder="Enter Nickname"
+            value="<%= typeof nick != 'undefined' ? nick : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input
+            type="password"
+            id="pass"
+            name="pass"
+            class="form-control"
+            placeholder="Create Password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pass2">Confirm Password</label>
+          <input
+            type="password"
+            id="pass2"
+            name="pass2"
+            class="form-control"
+            placeholder="Confirm Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+      </form>
+      <p class="lead mt-4">Already Have An Account? <a href="/login">Login</a></p>
+    </div>
+  </div>
+</div>

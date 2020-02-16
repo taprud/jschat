@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/chatstyle.css">
+<audio id="audio" src="/audio/msg.mp3" autoplay="false"></audio>
+<div class="row mt-5">
+  <div class="col-md-6 offset-md-3 col-sm-12">
+    <h1 class="text-center">
+      JSChat
+      <a href="/logout" class="btn btn-danger">Logout</a>
+      <p id="welcome" class="lead mb-3">Welcome, <%= nick %></p>
+    </h1>
+    <div id="chat">
+      <div class="card">
+        <div id="msgArea" class="card-block"></div>
+      </div>
+      <br>
+      <textarea id="msgText" class="form-control" placeholder="Enter a message..."></textarea>
+      <br>
+      <div class="form-group">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="toggleScroll" checked="">
+          <label class="custom-control-label" for="toggleScroll">Enable autoscroll</label>
+        </div>
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="toggleSound" checked="">
+          <label class="custom-control-label" for="toggleSound">Enable sound</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/io.js"></script>
